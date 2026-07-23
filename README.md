@@ -103,36 +103,6 @@ Server runs at `http://localhost:3000`
 
 ---
 
-## Deployment to GitHub
-
-### First Time Setup
-
-```bash
-# Initialize git if not already done
-git init
-
-# Add remote (replace with your repo URL)
-git remote add origin https://github.com/YOUR_USERNAME/role-app.git
-
-# Create initial commit
-git add .
-git commit -m "chore: initial commit - F1 availability slots MVP"
-
-# Push to GitHub
-git branch -M main
-git push -u origin main
-```
-
-### For Existing GitHub Repo
-
-```bash
-git add .
-git commit -m "feat: add availability grid feature (F1)"
-git push origin main
-```
-
----
-
 ## Project Structure
 
 ```
@@ -297,7 +267,7 @@ MIT
 
 ## Author
 
-Dennis Silva (@dennsilva)  
+Dennis Silva (@dennsilva)
 São Paulo, Brazil
 
 ---
