@@ -1,0 +1,23 @@
+<%# app/views/availabilities/show.html.erb %>
+<div class="availability-grid-wrapper">
+  <div class="grid-container">
+    <div class="grid-header">
+      <div class="hour-label"></div>
+      <% @days.each_with_index do |day, _index| %>
+        <div class="day-label"><%= day %></div>
+      <% end %>
+    </div>
+
+    <% @hours.each do |hour| %>
+      <div class="grid-row">
+        <div class="hour-label"><%= "#{hour}h" %></div>
+        <% (0..6).each do |day| %>
+          <%= render "availabilities/cell",
+                day:    day,
+                hour:   hour,
+                status: @grid[day][hour] %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

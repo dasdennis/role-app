@@ -1,0 +1,16 @@
+<%# app/views/availabilities/_cell.html.erb %>
+<%
+  css_class = case status
+              when "available" then "cell--available"
+              when "flexible"  then "cell--flexible"
+              else                  "cell--empty"
+              end
+%>
+<div  id="<%= "slot-#{day}-#{hour}" %>"
+      class="grid-cell <%= css_class %>"
+      data-controller="slot"
+      data-action="click->slot#toggle"
+      data-slot-day-value="<%= day %>"
+      data-slot-hour-value="<%= hour %>"
+      data-slot-toggle-url-value="<%= toggle_availability_path %>">
+</div>

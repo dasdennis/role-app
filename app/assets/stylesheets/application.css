@@ -1,0 +1,76 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+/* app/assets/stylesheets/application.css */
+
+.availability-grid-wrapper {
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.grid-container {
+  display: inline-grid;
+}
+
+.grid-header,
+.grid-row {
+  display: grid;
+  grid-template-columns: 60px repeat(7, 80px);
+  /* hora + 7 dias */
+  align-items: center;
+}
+
+.grid-header {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.day-label,
+.hour-label {
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 4px 0;
+}
+
+.hour-label {
+  text-align: right;
+  padding-right: 8px;
+  color: #666;
+}
+
+/* Células */
+.grid-cell {
+  width: 72px;
+  height: 36px;
+  margin: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  transition: background-color 0.15s ease;
+}
+
+.grid-cell.cell--empty {
+  background-color: #f0f0f0;
+}
+
+.grid-cell.cell--available {
+  background-color: #4ade80;
+}
+
+/* verde */
+.grid-cell.cell--flexible {
+  background-color: #facc15;
+}
+
+/* amarelo */
+
+.grid-cell:hover {
+  filter: brightness(0.9);
+}
