@@ -56,3 +56,7 @@ vendor/bundle/
 
 # Database dumps
 *.dump
+
+# Ignore key files for decrypting credentials and more.
+/config/credentials/*.key
+config/credentials/development.key
